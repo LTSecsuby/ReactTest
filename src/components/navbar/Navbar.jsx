@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className={style.item}>
             <p><NavLink to='/content'>Profile</NavLink></p>
             <p><NavLink to='/content2'>Chat</NavLink></p>
-            <p>Contacts</p>
+            <p><NavLink to="/content3">Contacts</NavLink></p>
             <p>Groups</p>
             <p><NavLink to='/widget'>Widget weather</NavLink></p>
         </div>
