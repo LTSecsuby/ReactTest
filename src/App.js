@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
 import Content from "./components/content/Content";
 import Content2 from "./components/content2/Content2";
+import Content3 from "./components/content3/Content3";
 import Widget from "./components/widget/Widget";
 import {BrowserRouter, Route} from "react-router-dom";
 
@@ -25,6 +26,7 @@ function App() {
                                 <div className="col-sm-9">
                                     <Route path='/content' component={Content}/>
                                     <Route path='/content2' component={Content2}/>
+                                    <Route path='/content3' component={Content3}/>
                                     <Route path='/widget' component={Widget}/>
                                 </div>
                             </div>
