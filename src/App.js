@@ -9,7 +9,7 @@ import Weather from "./components/WeatherComponent/Weather";
 import {BrowserRouter, Route} from "react-router-dom";
 import Friends from "./components/FriendsComponent/Friends";
 
-function App() {
+function App(props) {
 
     return (
         <BrowserRouter>
@@ -23,11 +23,11 @@ function App() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-sm-3">
-                                    <NavbarWrap/>
+                                    <NavbarWrap navbarData={props.navbarData} />
                                 </div>
                                 <div className="col-sm-9">
                                     <Route path={'/Profile'} component={Profile} />
-                                    <Route path={'/Dialogs'} component={Dialogs} />
+                                    <Route path={'/Dialogs'} render={ () => <Dialogs dialogsData={props.dialogsData}/>} />
                                     <Route path={'/Groups'} component={Groups} />
                                     <Route path={'/Friends'} component={Friends} />
                                     <Route path={'/Weather'} component={Weather} />

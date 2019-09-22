@@ -3,19 +3,9 @@ import React from 'react';
 import style from './NavbarWrap.module.css';
 import {NavLink} from "react-router-dom";
 
-let NavbarData = [
-    {elementName: 'Profile'},
-    {elementName: 'Dialogs'},
-    {elementName: 'Friends'},
-    {elementName: 'Groups'},
-    {elementName: 'Weather'}
-]
+const NavbarWrap = (props) => {
 
-
-const NavbarWrap = () => {
-
-    let NavbarElements = NavbarData
-        .map((element) => {
+    let NavbarElements = props.navbarData.map((element) => {
 
                 const path = '/' + element.elementName;
                 return (
