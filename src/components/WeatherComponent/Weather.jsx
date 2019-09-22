@@ -1,10 +1,10 @@
 import React from 'react';
 import _ from "lodash";
-import style from './Widget.module.css';
+import style from './Weather.module.css';
 
 const KEY_API = "0efa8be9f24f45f5916162018191009";
 
-class Widget extends React.Component {
+class Weather extends React.Component {
 
     constructor(props){
         super(props);
@@ -61,4 +61,4 @@ class Widget extends React.Component {
     }
 }
 
-export default Widget;
+export default Weather;

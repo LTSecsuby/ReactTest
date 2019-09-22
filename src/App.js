@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
 import Header from "./components/header/Header";
-import Navbar from "./components/navbar/Navbar";
-import Content from "./components/content/Content";
-import Content2 from "./components/content2/Content2";
-import Content3 from "./components/content3/Content3";
-import Widget from "./components/widget/Widget";
+import NavbarWrap from "./components/navbar/NavbarWrap";
+import Profile from "./components/ProfileComponent/Profile";
+import Dialogs from "./components/DialogsComponent/Dialogs";
+import Groups from "./components/GroupsComponent/Groups";
+import Weather from "./components/WeatherComponent/Weather";
 import {BrowserRouter, Route} from "react-router-dom";
+import Friends from "./components/FriendsComponent/Friends";
 
 function App() {
+
     return (
         <BrowserRouter>
             <div className="App">
@@ -21,13 +23,14 @@ function App() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-sm-3">
-                                    <Navbar/>
+                                    <NavbarWrap/>
                                 </div>
                                 <div className="col-sm-9">
-                                    <Route path='/content' component={Content}/>
-                                    <Route path='/content2' component={Content2}/>
-                                    <Route path='/content3' component={Content3}/>
-                                    <Route path='/widget' component={Widget}/>
+                                    <Route path={'/Profile'} component={Profile} />
+                                    <Route path={'/Dialogs'} component={Dialogs} />
+                                    <Route path={'/Groups'} component={Groups} />
+                                    <Route path={'/Friends'} component={Friends} />
+                                    <Route path={'/Weather'} component={Weather} />
                                 </div>
                             </div>
                         </div>

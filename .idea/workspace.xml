@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbf7658-7d0e-491d-82e8-3ca90110fb32" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/NavbarWrap.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content2/Content2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content2/Content2.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content2/Content2.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content2/Content2.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content3/Content3.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content3/Content3.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/NavbarWrap.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/widget/Widget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/widget/Widget.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/content3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/FriendsComponent" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -39,7 +52,11 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Evgen\ProjectReact\ReactTest\react-app\src\components\FriendsComponent" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Evgen\ProjectReact\ReactTest\react-app\src\components\FriendsComponent" />
       <recent name="P:\nodeJS\projects\my-app\ReactTest\src\components\content3" />
       <recent name="C:\Users\Evgen\ProjectReact\ReactTest\react-app\src\components\content2" />
     </key>
@@ -73,6 +90,7 @@
       <workItem from="1569058346418" duration="5867000" />
       <workItem from="1569070987662" duration="897000" />
       <workItem from="1569079991224" duration="5298000" />
+      <workItem from="1569140243199" duration="5994000" />
     </task>
     <servers />
   </component>

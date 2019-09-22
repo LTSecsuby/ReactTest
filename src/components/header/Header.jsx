@@ -6,7 +6,7 @@ const Header = () => {
     return (
 
         <div className={style.item}>
-            <p>My site</p>
+            <h1>REACT</h1>
         </div>
 
 
