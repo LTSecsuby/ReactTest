@@ -28,7 +28,7 @@ function App(props) {
                                 <div className="col-sm-9">
                                     <Route path={'/Profile'} component={Profile} />
                                     <Route path={'/Dialogs'} render={ () => <Dialogs dialogsData={props.dialogsData}/>} />
-                                    <Route path={'/Groups'} component={Groups} />
+                                    <Route path={'/Groups'} render={ () => <Groups groupsData={props.groupsData}/>} />
                                     <Route path={'/Friends'} component={Friends} />
                                     <Route path={'/Weather'} component={Weather} />
                                 </div>

@@ -20,7 +20,20 @@ let navbarData = [
     {elementName: 'Weather'}
 ];
 
-ReactDOM.render(<App dialogsData={dialogsData} navbarData={navbarData}/>, document.getElementById('root'));
+let groupsData = [
+    {elementName: 'JavaScript'},
+    {elementName: 'HTML'},
+    {elementName: 'CSS',
+        posts: [{post: 'svsgsg'},
+            {post: 'kfmlsfsk'},
+            {post: 'ksjkjfre'}
+            ]
+    },
+    {elementName: 'React'}
+]
+
+
+ReactDOM.render(<App dialogsData={dialogsData} groupsData={groupsData} navbarData={navbarData}/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
