@@ -1,4 +1,10 @@
 .item{
     background-color: aquamarine;
     color: blue;
+
+}
+
+textarea{
+    max-width: 100%;
+    height: auto;
 }
