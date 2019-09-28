@@ -23,14 +23,21 @@ function App(props) {
                         <div className="container">
                             <div className="row">
                                 <div className="col-sm-3">
-                                    <NavbarWrap navbarData={props.navbarData} />
+                                    <NavbarWrap navbarData={props.navbarData}/>
                                 </div>
                                 <div className="col-sm-9">
-                                    <Route path={'/Profile'} component={Profile} />
-                                    <Route path={'/Dialogs'} render={ () => <Dialogs dialogsData={props.dialogsData}/>} />
-                                    <Route path={'/Groups'} render={ () => <Groups addGroupElement={props.addGroupElement} state={props.state}/>} />
-                                    <Route path={'/Friends'} component={Friends} />
-                                    <Route path={'/Weather'} component={Weather} />
+                                    <Route path={'/Profile'} component={Profile}/>
+                                    <Route path={'/Dialogs'} render={() => <Dialogs dialogsData={props.dialogsData}/>}/>
+                                    <Route path={'/Groups'} render={
+                                        () => <Groups addGroupElement={props.addGroupElement}
+                                                      onGroupText={props.onGroupText}
+                                                      addPostElement={props.addPostElement}
+                                                      onPostText={props.onPostText}
+                                                      state={props.state}
+                                        />}
+                                    />
+                                    <Route path={'/Friends'} component={Friends}/>
+                                    <Route path={'/Weather'} component={Weather}/>
                                 </div>
                             </div>
                         </div>
