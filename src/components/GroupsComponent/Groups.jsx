@@ -1,12 +1,11 @@
 import React from 'react';
 import style from './Groups.module.css';
 import {NavLink, Route} from "react-router-dom";
-import {renderApp} from "../../StartApp";
 
 
 const Groups = (props) => {
 
-    const groupItems = props.state.groupsData.groupElement.map(
+    const groupItems = props.store.getState().groupsData.groupElement.map(
         (element) => {
 
             const path = '/Groups/' + element.elementName;
@@ -16,7 +15,7 @@ const Groups = (props) => {
         }
     );
 
-    const groupMsg = props.state.groupsData.groupPosts.map(
+    const groupMsg = props.store.getState().groupsData.groupPosts.map(
         (element) => {
 
             if (window.location.pathname === '/Groups/' + element.groupElement) {
@@ -30,29 +29,25 @@ const Groups = (props) => {
     let newGroupElement = React.createRef();
 
     let addGroups = () => {
-        props.addGroupElement();
-        props.onGroupText('');
-        renderApp();
+        props.store.addGroup();
+        props.store.setTextGroup('');
     };
 
     let onGroupChange = () => {
         let nameGroups = newGroupElement.current.value;
-        props.onGroupText(nameGroups);
-        renderApp();
+        props.store.setTextGroup(nameGroups);
     };
 
     let newPostElement = React.createRef();
 
     let addPosts = () => {
-        props.addPostElement();
-        props.onPostText('');
-        renderApp();
+        props.store.addPostGroup();
+        props.store.setTextPostGroup('');
     };
 
     let onPostChange = () => {
         let textPosts = newPostElement.current.value;
-        props.onPostText(textPosts);
-        renderApp();
+        props.store.setTextPostGroup(textPosts);
     };
 
 
@@ -66,13 +61,13 @@ const Groups = (props) => {
                     <div className="col-6 col-lg-2">
                         <h4>Groups</h4>
                         {groupItems}
-                        <textarea onChange={onGroupChange} ref={newGroupElement} value={props.state.groupsData.nameGroupText}/>
+                        <textarea onChange={onGroupChange} ref={newGroupElement} value={props.store.getState().groupsData.nameGroupText}/>
                         <p><button onClick={addGroups}>Push</button></p>
                     </div>
                     <div className="col-6 col-lg-8">
                         <h4>Group chat</h4>
                         {groupMsg}
-                        <textarea onChange={onPostChange} ref={newPostElement} value={props.state.groupsData.textGroupPost}/>
+                        <textarea onChange={onPostChange} ref={newPostElement} value={props.store.getState().groupsData.textGroupPost}/>
                         <p><button onClick={addPosts}>Push</button></p>
                     </div>
                 </div>
@@ -80,6 +75,6 @@ const Groups = (props) => {
 
         </div>
     );
-}
+};
 
 export default Groups;

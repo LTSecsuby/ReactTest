@@ -10,7 +10,7 @@ const Dialogs = (props) => {
                 <div className="row">
                     <div className="col">
                         <h4>Dialogs</h4>
-                        <Dialog dialogsData ={props.dialogsData} />
+                        <Dialog store ={props.store} />
                     </div>
                 </div>
             </div>

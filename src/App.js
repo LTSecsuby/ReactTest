@@ -23,18 +23,17 @@ function App(props) {
                         <div className="container">
                             <div className="row">
                                 <div className="col-sm-3">
-                                    <NavbarWrap navbarData={props.navbarData}/>
+                                    <NavbarWrap store={props.store}/>
                                 </div>
                                 <div className="col-sm-9">
                                     <Route path={'/Profile'} component={Profile}/>
-                                    <Route path={'/Dialogs'} render={() => <Dialogs dialogsData={props.dialogsData}/>}/>
+                                    <Route path={'/Dialogs'} render={
+                                        () => <Dialogs store={props.store}/>
+                                            }
+                                    />
                                     <Route path={'/Groups'} render={
-                                        () => <Groups addGroupElement={props.addGroupElement}
-                                                      onGroupText={props.onGroupText}
-                                                      addPostElement={props.addPostElement}
-                                                      onPostText={props.onPostText}
-                                                      state={props.state}
-                                        />}
+                                        () => <Groups store={props.store}/>
+                                            }
                                     />
                                     <Route path={'/Friends'} component={Friends}/>
                                     <Route path={'/Weather'} component={Weather}/>

@@ -1,13 +1,19 @@
+let renderApp = () => {
+    console.log('render..');
+};
+
 let state = {
     groupsData: {
-        groupElement: [
-
-        ],
+        groupElement: [],
         groupPosts: [],
         currentIdPost: 0,
         nameGroupText: '',
         textGroupPost: ''
     }
+};
+
+export const subscribe = (observer) => {
+    renderApp = observer;
 };
 
 export let dialogsData = [
@@ -40,22 +46,21 @@ export let addGroupElement = () => {
         };
         state.groupsData.groupElement.push(newElementGroup);
     }
-
+    renderApp();
 };
 
 export let onGroupText = (element) => {
 
     state.groupsData.nameGroupText = element;
+    renderApp();
 };
 
 export let addPostElement = () => {
 
     let group = '' + window.location.pathname;
 
-    let lenPost = group.length;
-
     let str = '';
-    for (let i = 8; i < lenPost; i++) {
+    for (let i = 8; i < window.location.pathname.length; i++) {
         str = str + group[i]
     }
 
@@ -67,12 +72,13 @@ export let addPostElement = () => {
     };
 
     state.groupsData.groupPosts.push(newPostGroup);
+    renderApp();
 };
 
 export let onPostText = (text) => {
 
     state.groupsData.textGroupPost = text;
-
+    renderApp();
 };
 
 
