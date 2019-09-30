@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbf7658-7d0e-491d-82e8-3ca90110fb32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StartApp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DialogsComponent/DialogComponent/Dialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DialogsComponent/DialogComponent/Dialog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/NavbarWrap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/NavbarWrap.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +86,10 @@
       <workItem from="1569424600101" duration="4574000" />
       <workItem from="1569516714909" duration="1137000" />
       <workItem from="1569661058654" duration="8863000" />
-      <workItem from="1569744025046" duration="8028000" />
+      <workItem from="1569744025046" duration="8198000" />
+      <workItem from="1569757041168" duration="1012000" />
+      <workItem from="1569772645953" duration="60000" />
+      <workItem from="1569853795142" duration="7205000" />
     </task>
     <servers />
   </component>

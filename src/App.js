@@ -36,7 +36,10 @@ function App(props) {
                                             }
                                     />
                                     <Route path={'/Friends'} component={Friends}/>
-                                    <Route path={'/Weather'} component={Weather}/>
+                                    <Route path={'/Weather'} render={
+                                        () => <Weather store={props.store}/>
+                                            }
+                                    />
                                 </div>
                             </div>
                         </div>

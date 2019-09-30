@@ -1,10 +1,11 @@
+import _ from "lodash";
 let store = {
 
-    _subscriber() {
+    _subscriberRenderApp() {
         console.log('no subscribers..')
     },
     subscribe(observer) {
-        this._subscriber = observer;
+        this._subscriberRenderApp = observer;
     },
     _state: {
         groupsData: {
@@ -26,18 +27,25 @@ let store = {
             {elementName: 'Friends'},
             {elementName: 'Groups'},
             {elementName: 'Weather'}
-        ]
+        ],
+        widgetWeatherData:
+            {
+                inputText: "",
+                temp: "",
+                city: "",
+                error: ""
+            }
     },
     getState() {
         return this._state;
     },
     setTextPostGroup(text) {
         this._state.groupsData.textGroupPost = text;
-        render();
+        this._subscriberRenderApp();
     },
     setTextGroup(text) {
         this._state.groupsData.nameGroupText = text;
-        render();
+        this._subscriberRenderApp();
     },
     _setIdPost() {
         this._state.groupsData.currentIdPost = this._state.groupsData.currentIdPost + 1;
@@ -56,7 +64,7 @@ let store = {
             };
             this._state.groupsData.groupElement.push(newElementGroup);
         }
-        render();
+        this._subscriberRenderApp();
     },
     addPostGroup() {
         let group = '' + window.location.pathname;
@@ -73,9 +81,39 @@ let store = {
         };
 
         this._state.groupsData.groupPosts.push(newPostGroup);
-        render();
+        this._subscriberRenderApp();
+    },
+    setTextWeatherWidget(text) {
+        this._state.widgetWeatherData.inputText = text;
+        //_.debounce(this._getWeather().bind(window), 3000);
+        this._getWeather();
+
+    },
+    async _getWeather() {
+
+        const KEY_API = "0efa8be9f24f45f5916162018191009";
+
+        if (store.getState().widgetWeatherData.inputText) {
+            const city = store.getState().widgetWeatherData.inputText;
+
+            const api_url = await fetch(
+                `https://api.worldweatheronline.com/premium/v1/weather.ashx?key=${KEY_API}&q=${city}&num_of_days=1&format=JSON`
+            );
+
+            const data = await api_url.json();
+
+            if ("error" in data.data) {
+                store.getState().widgetWeatherData.error = data.data.error[0].msg;
+                store.getState().widgetWeatherData.temp = "";
+                store.getState().widgetWeatherData.city = "";
+            } else {
+                store.getState().widgetWeatherData.error = "";
+                store.getState().widgetWeatherData.temp = data.data.weather[0].avgtempC;
+                store.getState().widgetWeatherData.city = data.data.request[0].query;
+            }
+        }
+        store._subscriberRenderApp();
     }
 };
-const render = () => store._subscriber();
 
 export default store;

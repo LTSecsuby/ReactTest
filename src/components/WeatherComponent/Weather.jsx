@@ -2,63 +2,28 @@ import React from 'react';
 import _ from "lodash";
 import style from './Weather.module.css';
 
-const KEY_API = "0efa8be9f24f45f5916162018191009";
+const Weather = (props) => {
+       // this.getWeather = this.getWeather.bind(window);
+        //window.getWeather = _.debounce(this.getWeather.bind(window), 3000);
+    let newInputText = React.createRef();
 
-class Weather extends React.Component {
+    let onInputWidgetChange = () => {
+        let inputText = newInputText.current.value;
+        props.store.setTextWeatherWidget(inputText);
+    };
 
-    constructor(props){
-        super(props);
-        this.state = {
-            temp: "",
-            city: "",
-            error: ""
-        };
-        this.getWeather = this.getWeather.bind(this);
-        //this.getWeather = _.debounce(this.getWeather.bind(this), 1000);
-    }
+    return (
 
-    getWeather = async e => {
+        <div className={style.item}>
+            <h2>Widget weather</h2>
+            <input type="text" onChange={onInputWidgetChange} ref={newInputText} value={props.store.getState().widgetWeatherData.inputText}/>
+            <p>{props.store.getState().widgetWeatherData.city}</p>
+            <p>{props.store.getState().widgetWeatherData.temp}</p>
+            <p>{props.store.getState().widgetWeatherData.error}</p>
+        </div>
 
-        if (e.target.value) {
-            const city = e.target.value;
+    );
 
-            const api_url = await fetch(
-                `https://api.worldweatheronline.com/premium/v1/weather.ashx?key=${KEY_API}&q=${city}&num_of_days=1&format=JSON`
-            );
-
-            const data = await api_url.json();
-
-            if ("error" in data.data) {
-                this.setState({
-
-                    error: data.data.error[0].msg,
-                    temp: "",
-                    city: ""
-                })
-            } else {
-                this.setState({
-                    error: "",
-                    temp: data.data.weather[0].avgtempC,
-                    city: data.data.request[0].query
-                })
-            }
-        }
-    }
-
-    render() {
-
-        return (
-
-            <div className={style.item}>
-                <h2>Widget weather</h2>
-                <input type="text" onChange={this.getWeather}/>
-                <p>{this.state.city}</p>
-                <p>{this.state.temp}</p>
-                <p>{this.state.error}</p>
-            </div>
-
-        );
-    }
-}
+};
 
 export default Weather;
