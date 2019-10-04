@@ -1,7 +1,12 @@
 import React from 'react';
 import style from './Groups.module.css';
 import {NavLink, Route} from "react-router-dom";
+import {dispatch} from "../../store";
 
+const SET_TEXT_POST_GROUP = 'setTextPostGroup';
+const SET_TEXT_GROUP = 'setTextGroup';
+const ADD_POST_GROUP = 'addPostGroup';
+const ADD_GROUP = 'addGroup';
 
 const Groups = (props) => {
 
@@ -26,31 +31,33 @@ const Groups = (props) => {
         }
     );
 
+    let createActive = (typeActive, msgActive) => {
+        return  {type: typeActive, message: msgActive}
+    };
+
     let newGroupElement = React.createRef();
 
     let addGroups = () => {
-        props.store.addGroup();
-        props.store.setTextGroup('');
+        dispatch(createActive(ADD_GROUP));
+        dispatch(createActive(SET_TEXT_GROUP, ''));
     };
 
     let onGroupChange = () => {
         let nameGroups = newGroupElement.current.value;
-        props.store.setTextGroup(nameGroups);
+        dispatch(createActive(SET_TEXT_GROUP, nameGroups));
     };
 
     let newPostElement = React.createRef();
 
     let addPosts = () => {
-        props.store.addPostGroup();
-        props.store.setTextPostGroup('');
+        dispatch(createActive(ADD_POST_GROUP));
+        dispatch(createActive(SET_TEXT_POST_GROUP, ''));
     };
 
     let onPostChange = () => {
         let textPosts = newPostElement.current.value;
-        props.store.setTextPostGroup(textPosts);
+        dispatch(createActive(SET_TEXT_POST_GROUP, textPosts));
     };
-
-
 
 
     return (

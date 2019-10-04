@@ -1,4 +1,11 @@
 import _ from "lodash";
+
+const SET_TEXT_POST_GROUP = 'setTextPostGroup';
+const SET_TEXT_GROUP = 'setTextGroup';
+const ADD_POST_GROUP = 'addPostGroup';
+const ADD_GROUP = 'addGroup';
+const SET_TEXT_WEATHER_WIDGET = 'setTextWeatherWidget';
+
 let store = {
 
     _subscriberRenderApp() {
@@ -39,55 +46,11 @@ let store = {
     getState() {
         return this._state;
     },
-    setTextPostGroup(text) {
-        this._state.groupsData.textGroupPost = text;
-        this._subscriberRenderApp();
-    },
-    setTextGroup(text) {
-        this._state.groupsData.nameGroupText = text;
-        this._subscriberRenderApp();
-    },
     _setIdPost() {
         this._state.groupsData.currentIdPost = this._state.groupsData.currentIdPost + 1;
     },
     _getIdPost() {
         return this._state.groupsData.currentIdPost;
-    },
-    addGroup() {
-        let mark = true;
-        for (let i = 0; i < this._state.groupsData.groupElement.length; i++) {
-            if (this._state.groupsData.groupElement[i].elementName === this._state.groupsData.nameGroupText) mark = false;
-        }
-        if (mark) {
-            let newElementGroup = {
-                elementName: this._state.groupsData.nameGroupText
-            };
-            this._state.groupsData.groupElement.push(newElementGroup);
-        }
-        this._subscriberRenderApp();
-    },
-    addPostGroup() {
-        let group = '' + window.location.pathname;
-
-        let str = '';
-        for (let i = 8; i < window.location.pathname.length; i++) {
-            str = str + group[i];
-        }
-
-        this._setIdPost();
-
-        let newPostGroup = {
-            id: this._getIdPost(), groupElement: str, msg: this._state.groupsData.textGroupPost
-        };
-
-        this._state.groupsData.groupPosts.push(newPostGroup);
-        this._subscriberRenderApp();
-    },
-    setTextWeatherWidget(text) {
-        this._state.widgetWeatherData.inputText = text;
-        //_.debounce(this._getWeather().bind(window), 3000);
-        this._getWeather();
-
     },
     async _getWeather() {
 
@@ -113,6 +76,58 @@ let store = {
             }
         }
         store._subscriberRenderApp();
+    }
+};
+
+export const dispatch = (active) => {
+    switch (active.type) {
+        case SET_TEXT_GROUP:
+            store._state.groupsData.nameGroupText = active.message;
+            store._subscriberRenderApp();
+            break;
+        case SET_TEXT_POST_GROUP:
+            store._state.groupsData.textGroupPost = active.message;
+            store._subscriberRenderApp();
+            break;
+        case ADD_POST_GROUP:
+            let group = '' + window.location.pathname;
+
+            let str = '';
+            for (let i = 8; i < window.location.pathname.length; i++) {
+                str = str + group[i];
+            }
+
+            store._setIdPost();
+
+            let newPostGroup = {
+                id: store._getIdPost(), groupElement: str, msg: store._state.groupsData.textGroupPost
+            };
+
+            store._state.groupsData.groupPosts.push(newPostGroup);
+            store._subscriberRenderApp();
+            break;
+        case ADD_GROUP:
+            let mark = true;
+            for (let i = 0; i < store._state.groupsData.groupElement.length; i++) {
+                if (store._state.groupsData.groupElement[i].elementName === store._state.groupsData.nameGroupText) mark = false;
+            }
+            if (mark) {
+                let newElementGroup = {
+                    elementName: store._state.groupsData.nameGroupText
+                };
+                store._state.groupsData.groupElement.push(newElementGroup);
+            }
+            store._subscriberRenderApp();
+            break;
+        case SET_TEXT_WEATHER_WIDGET:
+            store._state.widgetWeatherData.inputText = active.message;
+            //_.debounce(this._getWeather().bind(window), 3000);
+            store._getWeather();
+            break;
+        default:
+            alert('unknown active type');
+            break;
+
     }
 };
 
