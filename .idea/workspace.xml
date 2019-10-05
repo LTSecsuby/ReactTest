@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbf7658-7d0e-491d-82e8-3ca90110fb32" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />

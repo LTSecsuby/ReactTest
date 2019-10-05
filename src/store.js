@@ -76,59 +76,78 @@ let store = {
             }
         }
         store._subscriberRenderApp();
+    },
+    dispatch(active) {
+        switch (active.type) {
+            case SET_TEXT_GROUP:
+                store._state.groupsData.nameGroupText = active.message;
+                store._subscriberRenderApp();
+                break;
+            case SET_TEXT_POST_GROUP:
+                store._state.groupsData.textGroupPost = active.message;
+                store._subscriberRenderApp();
+                break;
+            case ADD_POST_GROUP:
+                let group = '' + window.location.pathname;
+
+                let str = '';
+                for (let i = 8; i < window.location.pathname.length; i++) {
+                    str = str + group[i];
+                }
+
+                store._setIdPost();
+
+                let newPostGroup = {
+                    id: store._getIdPost(), groupElement: str, msg: store._state.groupsData.textGroupPost
+                };
+
+                store._state.groupsData.groupPosts.push(newPostGroup);
+                store._subscriberRenderApp();
+                break;
+            case ADD_GROUP:
+                let mark = true;
+                for (let i = 0; i < store._state.groupsData.groupElement.length; i++) {
+                    if (store._state.groupsData.groupElement[i].elementName === store._state.groupsData.nameGroupText) mark = false;
+                }
+                if (mark) {
+                    let newElementGroup = {
+                        elementName: store._state.groupsData.nameGroupText
+                    };
+                    store._state.groupsData.groupElement.push(newElementGroup);
+                }
+                store._subscriberRenderApp();
+                break;
+            case SET_TEXT_WEATHER_WIDGET:
+                store._state.widgetWeatherData.inputText = active.message;
+                //_.debounce(this._getWeather().bind(window), 3000);
+                store._getWeather();
+                break;
+            default:
+                alert('unknown active type');
+                break;
+
+        }
     }
 };
 
-export const dispatch = (active) => {
-    switch (active.type) {
-        case SET_TEXT_GROUP:
-            store._state.groupsData.nameGroupText = active.message;
-            store._subscriberRenderApp();
-            break;
-        case SET_TEXT_POST_GROUP:
-            store._state.groupsData.textGroupPost = active.message;
-            store._subscriberRenderApp();
-            break;
-        case ADD_POST_GROUP:
-            let group = '' + window.location.pathname;
+export const setTextPostGroupActiveCreator = (activeMessage) => {
+    return { type: SET_TEXT_POST_GROUP, message: activeMessage}
+};
 
-            let str = '';
-            for (let i = 8; i < window.location.pathname.length; i++) {
-                str = str + group[i];
-            }
+export const setTextGroupActionCreator = (activeMessage) => {
+  return { type: SET_TEXT_GROUP, message: activeMessage }
+};
 
-            store._setIdPost();
+export const addPostGroupActiveCreator = () => {
+    return { type: ADD_POST_GROUP }
+};
 
-            let newPostGroup = {
-                id: store._getIdPost(), groupElement: str, msg: store._state.groupsData.textGroupPost
-            };
+export const addGroupActionCreator = () => {
+  return { type: ADD_GROUP }
+};
 
-            store._state.groupsData.groupPosts.push(newPostGroup);
-            store._subscriberRenderApp();
-            break;
-        case ADD_GROUP:
-            let mark = true;
-            for (let i = 0; i < store._state.groupsData.groupElement.length; i++) {
-                if (store._state.groupsData.groupElement[i].elementName === store._state.groupsData.nameGroupText) mark = false;
-            }
-            if (mark) {
-                let newElementGroup = {
-                    elementName: store._state.groupsData.nameGroupText
-                };
-                store._state.groupsData.groupElement.push(newElementGroup);
-            }
-            store._subscriberRenderApp();
-            break;
-        case SET_TEXT_WEATHER_WIDGET:
-            store._state.widgetWeatherData.inputText = active.message;
-            //_.debounce(this._getWeather().bind(window), 3000);
-            store._getWeather();
-            break;
-        default:
-            alert('unknown active type');
-            break;
-
-    }
+export const setTextWeatherWidgetActiveCreator = (activeMessage) => {
+    return { type: SET_TEXT_WEATHER_WIDGET, message: activeMessage}
 };
 
 export default store;
