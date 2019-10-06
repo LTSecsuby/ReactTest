@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbf7658-7d0e-491d-82e8-3ca90110fb32" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/store-management/groupsDataReducer.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/store-management/widgetWeatherDataReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -10,6 +11,8 @@
       <change beforePath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.module.css" afterDir="false" />
+=======
+>>>>>>> a78690a6b29666cf8254d781b5cf35eb16bbb24c
       <change beforePath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar/NavbarWrap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/NavbarWrap.jsx" afterDir="false" />

@@ -1,16 +1,28 @@
 import React from 'react';
 import _ from "lodash";
 import style from './Weather.module.css';
+<<<<<<< HEAD
 import store from "../../store-management/store";
 import {createSetTextWeatherWidgetActionToWidgetWeatherDataReducer} from "../../store-management/widgetWeatherDataReducer";
+=======
+import {setTextWeatherWidgetActiveCreator} from "../../store";
+>>>>>>> a78690a6b29666cf8254d781b5cf35eb16bbb24c
 
 const Weather = (props) => {
        // this.getWeather = this.getWeather.bind(window);
         //window.getWeather = _.debounce(this.getWeather.bind(window), 3000);
+<<<<<<< HEAD
 
     let onInputWidgetChange = (e) => {
         let inputText = e.target.value;
         store.dispatch(createSetTextWeatherWidgetActionToWidgetWeatherDataReducer(inputText));
+=======
+    let newInputText = React.createRef();
+
+    let onInputWidgetChange = () => {
+        let inputText = newInputText.current.value;
+        props.store.dispatch(setTextWeatherWidgetActiveCreator(inputText));
+>>>>>>> a78690a6b29666cf8254d781b5cf35eb16bbb24c
     };
 
     return (
