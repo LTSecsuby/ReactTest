@@ -23,21 +23,24 @@ function App(props) {
                         <div className="container">
                             <div className="row">
                                 <div className="col-sm-3">
-                                    <NavbarWrap store={props.store}/>
+                                    <NavbarWrap state={props.state}/>
                                 </div>
                                 <div className="col-sm-9">
                                     <Route path={'/Profile'} component={Profile}/>
                                     <Route path={'/Dialogs'} render={
-                                        () => <Dialogs store={props.store}/>
+                                        () => <Dialogs state={props.state}/>
                                             }
                                     />
                                     <Route path={'/Groups'} render={
-                                        () => <Groups store={props.store}/>
+                                        () => <Groups state={props.state}/>
                                             }
                                     />
-                                    <Route path={'/Friends'} component={Friends}/>
+                                    <Route path={'/Friends'} render={
+                                        () => <Friends state={props.state}/>
+                                            }
+                                    />
                                     <Route path={'/Weather'} render={
-                                        () => <Weather store={props.store}/>
+                                        () => <Weather state={props.state}/>
                                             }
                                     />
                                 </div>

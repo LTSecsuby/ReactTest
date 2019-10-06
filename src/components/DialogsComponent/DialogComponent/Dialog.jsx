@@ -5,7 +5,7 @@ import {NavLink, Route} from "react-router-dom";
 
 const TempComp = (props) => {
 
-    let DialogsMessage = props.store.getState().dialogsData.map(
+    let DialogsMessage = props.state.dialogsData.map(
         (element) => {
 
             if (element.id === props.id) {
@@ -20,13 +20,12 @@ const TempComp = (props) => {
     return (
         <div>{DialogsMessage}</div>
     )
-
 };
 
 
 const Dialog = (props) => {
 
-    let DialogsElements = props.store.getState().dialogsData.map(
+    let DialogsElements = props.state.dialogsData.map(
         (element) => {
 
             const path = "/Dialogs/" + element.id;
@@ -36,12 +35,12 @@ const Dialog = (props) => {
         }
     );
 
-    let DialogsRoute = props.store.getState().dialogsData.map(
+    let DialogsRoute = props.state.dialogsData.map(
         (element) => {
 
             return (
                 <Route path={'/Dialogs/' + element.id}
-                       render={() => <TempComp id={element.id} store={props.store}/>}/>
+                       render={() => <TempComp id={element.id} state={props.state}/>}/>
             )
         }
     );

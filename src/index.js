@@ -2,13 +2,13 @@ import React from 'react';
 import * as serviceWorker from './serviceWorker';
 import ReactDOM from "react-dom";
 import App from "./App";
-import store from "./store";
+import store from "./store-management/store";
 
-let renderApp = () => {
-    ReactDOM.render(<App store={store}/>, document.getElementById('root'));
+let renderApp = (state) => {
+    ReactDOM.render(<App state={state}/>, document.getElementById('root'));
 };
 
-renderApp();
+renderApp(store.getState());
 
 store.subscribe(renderApp);
 

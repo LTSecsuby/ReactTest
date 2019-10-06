@@ -1,12 +1,27 @@
 import React from 'react';
 import style from './Friends.module.css';
+import {NavLink} from "react-router-dom";
 
-const Friends = () => {
-    return(
+const Friends = (props) => {
+
+    let friendsElements = props.state.friendsData.friendsElement.map((element) => {
+
+            const path = '/Friends/' + element.nameFriend + element.surnameFriend;
+            return (
+                <div>
+                    <img src={element.avatar} alt="avatar"/>
+                    <span key={element.id}><NavLink to={path}>{element.nameFriend} {element.surnameFriend}</NavLink></span>
+                </div>
+            )
+        }
+    );
+
+    return (
         <div className={style.item}>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A at autem corporis dignissimos doloremque error fugiat fugit illum impedit nisi nulla, obcaecati porro quisquam suscipit temporibus tenetur voluptas voluptatem voluptatum?</p>
+            {friendsElements}
         </div>
     );
+
 };
 
 export default Friends;

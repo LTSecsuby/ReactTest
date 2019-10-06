@@ -1,62 +1,57 @@
 import React from 'react';
 import style from './Groups.module.css';
-import {NavLink, Route} from "react-router-dom";
-import {dispatch} from "../../store";
-
-const SET_TEXT_POST_GROUP = 'setTextPostGroup';
-const SET_TEXT_GROUP = 'setTextGroup';
-const ADD_POST_GROUP = 'addPostGroup';
-const ADD_GROUP = 'addGroup';
+import {NavLink} from "react-router-dom";
+import store from "../../store-management/store";
+import {
+    createAddGroupActiveToGroupsDataReducer, createAddPostGroupActiveToGroupsDataReducer,
+    createSetTextGroupActiveToGroupsDataReducer, createSetTextPostGroupActiveToGroupsDataReducer
+} from "../../store-management/groupsDataReducer";
 
 const Groups = (props) => {
 
-    const groupItems = props.store.getState().groupsData.groupElement.map(
+    const groupItems = props.state.groupsData.groupElement.map(
         (element) => {
 
             const path = '/Groups/' + element.elementName;
             return (
-                <p><NavLink to={path}>{element.elementName}</NavLink></p>
+                <p key={element.id}><NavLink to={path}>{element.elementName}</NavLink></p>
             )
         }
     );
 
-    const groupMsg = props.store.getState().groupsData.groupPosts.map(
+    const groupMsg = props.state.groupsData.groupPosts.map(
         (element) => {
 
             if (window.location.pathname === '/Groups/' + element.groupElement) {
                 return (
-                    <p>{element.msg}</p>
+                    <p key={element.id}>{element.msg}</p>
                 )
             }
         }
     );
 
-    let createActive = (typeActive, msgActive) => {
-        return  {type: typeActive, message: msgActive}
-    };
-
     let newGroupElement = React.createRef();
 
     let addGroups = () => {
-        dispatch(createActive(ADD_GROUP));
-        dispatch(createActive(SET_TEXT_GROUP, ''));
+        store.dispatch(createAddGroupActiveToGroupsDataReducer());
+        store.dispatch(createSetTextGroupActiveToGroupsDataReducer(''));
     };
 
     let onGroupChange = () => {
         let nameGroups = newGroupElement.current.value;
-        dispatch(createActive(SET_TEXT_GROUP, nameGroups));
+        store.dispatch(createSetTextGroupActiveToGroupsDataReducer(nameGroups));
     };
 
     let newPostElement = React.createRef();
 
     let addPosts = () => {
-        dispatch(createActive(ADD_POST_GROUP));
-        dispatch(createActive(SET_TEXT_POST_GROUP, ''));
+        store.dispatch(createAddPostGroupActiveToGroupsDataReducer());
+        store.dispatch(createSetTextPostGroupActiveToGroupsDataReducer(''));
     };
 
     let onPostChange = () => {
         let textPosts = newPostElement.current.value;
-        dispatch(createActive(SET_TEXT_POST_GROUP, textPosts));
+        store.dispatch(createSetTextPostGroupActiveToGroupsDataReducer(textPosts));
     };
 
 
@@ -68,13 +63,13 @@ const Groups = (props) => {
                     <div className="col-6 col-lg-2">
                         <h4>Groups</h4>
                         {groupItems}
-                        <textarea onChange={onGroupChange} ref={newGroupElement} value={props.store.getState().groupsData.nameGroupText}/>
+                        <textarea onChange={onGroupChange} ref={newGroupElement} value={props.state.groupsData.nameGroupText}/>
                         <p><button onClick={addGroups}>Push</button></p>
                     </div>
                     <div className="col-6 col-lg-8">
                         <h4>Group chat</h4>
                         {groupMsg}
-                        <textarea onChange={onPostChange} ref={newPostElement} value={props.store.getState().groupsData.textGroupPost}/>
+                        <textarea onChange={onPostChange} ref={newPostElement} value={props.state.groupsData.textGroupPost}/>
                         <p><button onClick={addPosts}>Push</button></p>
                     </div>
                 </div>

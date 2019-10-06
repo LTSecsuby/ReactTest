@@ -5,11 +5,11 @@ import {NavLink} from "react-router-dom";
 
 const NavbarWrap = (props) => {
 
-    let NavbarElements = props.store.getState().navbarData.map((element) => {
+    let NavbarElements = props.state.navbarData.map((element) => {
 
                 const path = '/' + element.elementName;
                 return (
-                    <p><NavLink to={path}>{element.elementName}</NavLink></p>
+                    <p key={element.id}><NavLink to={path}>{element.elementName}</NavLink></p>
                 )
             }
         );

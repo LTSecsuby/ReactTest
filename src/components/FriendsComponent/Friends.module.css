@@ -2,3 +2,8 @@
     background-color: aquamarine;
     color: blue;
 }
+
+img{
+    width: 50px;
+    border-radius: 50%;
+}
