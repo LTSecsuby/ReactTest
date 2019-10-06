@@ -1,21 +1,11 @@
 import React from 'react';
 import style from './Groups.module.css';
-<<<<<<< HEAD
 import {NavLink} from "react-router-dom";
 import store from "../../store-management/store";
 import {
     createAddGroupActiveToGroupsDataReducer, createAddPostGroupActiveToGroupsDataReducer,
     createSetTextGroupActiveToGroupsDataReducer, createSetTextPostGroupActiveToGroupsDataReducer
 } from "../../store-management/groupsDataReducer";
-=======
-import {NavLink, Route} from "react-router-dom";
-import {
-    addGroupActionCreator,
-    addPostGroupActiveCreator,
-    setTextGroupActionCreator,
-    setTextPostGroupActiveCreator
-} from "../../store";
->>>>>>> a78690a6b29666cf8254d781b5cf35eb16bbb24c
 
 const Groups = (props) => {
 
@@ -43,43 +33,27 @@ const Groups = (props) => {
     let newGroupElement = React.createRef();
 
     let addGroups = () => {
-<<<<<<< HEAD
+
         store.dispatch(createAddGroupActiveToGroupsDataReducer());
         store.dispatch(createSetTextGroupActiveToGroupsDataReducer(''));
-=======
-        props.store.dispatch(addGroupActionCreator());
-        props.store.dispatch(setTextGroupActionCreator(''));
->>>>>>> a78690a6b29666cf8254d781b5cf35eb16bbb24c
+
     };
 
     let onGroupChange = () => {
         let nameGroups = newGroupElement.current.value;
-<<<<<<< HEAD
         store.dispatch(createSetTextGroupActiveToGroupsDataReducer(nameGroups));
-=======
-        props.store.dispatch(setTextGroupActionCreator(nameGroups));
->>>>>>> a78690a6b29666cf8254d781b5cf35eb16bbb24c
     };
 
     let newPostElement = React.createRef();
 
     let addPosts = () => {
-<<<<<<< HEAD
         store.dispatch(createAddPostGroupActiveToGroupsDataReducer());
         store.dispatch(createSetTextPostGroupActiveToGroupsDataReducer(''));
-=======
-        props.store.dispatch(addPostGroupActiveCreator());
-        props.store.dispatch(setTextPostGroupActiveCreator(''));
->>>>>>> a78690a6b29666cf8254d781b5cf35eb16bbb24c
     };
 
     let onPostChange = () => {
         let textPosts = newPostElement.current.value;
-<<<<<<< HEAD
         store.dispatch(createSetTextPostGroupActiveToGroupsDataReducer(textPosts));
-=======
-        props.store.dispatch(setTextPostGroupActiveCreator(textPosts));
->>>>>>> a78690a6b29666cf8254d781b5cf35eb16bbb24c
     };
 
 

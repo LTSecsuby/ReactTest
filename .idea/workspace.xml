@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbf7658-7d0e-491d-82e8-3ca90110fb32" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/store-management/groupsDataReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store-management/widgetWeatherDataReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DialogsComponent/DialogComponent/Dialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DialogsComponent/DialogComponent/Dialog.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.module.css" afterDir="false" />
-=======
->>>>>>> a78690a6b29666cf8254d781b5cf35eb16bbb24c
       <change beforePath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/NavbarWrap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/NavbarWrap.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store-management/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +66,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="store.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/store.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.store.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -107,6 +105,7 @@
       <workItem from="1570203734720" duration="7615000" />
       <workItem from="1570267441192" duration="6917000" />
       <workItem from="1570338051680" duration="12480000" />
+      <workItem from="1570367609382" duration="863000" />
     </task>
     <servers />
   </component>
