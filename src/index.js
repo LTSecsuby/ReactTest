@@ -2,15 +2,29 @@ import React from 'react';
 import * as serviceWorker from './serviceWorker';
 import ReactDOM from "react-dom";
 import App from "./App";
-import store from "./store-management/store";
+import {combineReducers, createStore} from "redux";
+import groupsDataReducer from "./store-management/groupsDataReducer";
+import widgetWeatherDataReducer from "./store-management/widgetWeatherDataReducer";
+import {Provider} from "react-redux";
+import navbarReducer from "./store-management/navbarReducer";
 
-let renderApp = (state) => {
-    ReactDOM.render(<App state={state}/>, document.getElementById('root'));
-};
 
-renderApp(store.getState());
+let reducers = combineReducers({
+    groupsPage: groupsDataReducer,
+    navbarPage: navbarReducer,
+    widgetWeatherPage: widgetWeatherDataReducer
+});
 
-store.subscribe(renderApp);
+let store = createStore(reducers);
+
+ReactDOM.render(
+<Provider store={store}>
+    <App />
+</Provider>
+    , document.getElementById('root'));
+
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

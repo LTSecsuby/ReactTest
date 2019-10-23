@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 
 const NavbarWrap = (props) => {
 
-    let NavbarElements = props.state.navbarData.map((element) => {
+    let NavbarElements = props.navbarData.map((element) => {
 
                 const path = '/' + element.elementName;
                 return (
