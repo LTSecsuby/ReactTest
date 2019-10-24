@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import Weather from "./Weather";
-import {createSetTextWeatherWidgetActionToWidgetWeatherDataReducer} from "../../store-management/widgetWeatherDataReducer";
+import {createSetTextWeatherWidgetActionToWidgetWeatherDataReducer} from "../../reducers/widgetWeatherDataReducer";
 
 
 let mapStateToProps = (state) => {

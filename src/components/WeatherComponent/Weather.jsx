@@ -1,8 +1,6 @@
 import React from 'react';
 import _ from "lodash";
 import style from './Weather.module.css';
-import store from "../../store-management/store";
-import {createSetTextWeatherWidgetActionToWidgetWeatherDataReducer} from "../../store-management/widgetWeatherDataReducer";
 
 const Weather = (props) => {
        // this.getWeather = this.getWeather.bind(window);

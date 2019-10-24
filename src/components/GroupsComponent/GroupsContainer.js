@@ -3,7 +3,7 @@ import Groups from "./Groups";
 import {
     createAddGroupActiveToGroupsDataReducer, createAddPostGroupActiveToGroupsDataReducer,
     createSetTextGroupActiveToGroupsDataReducer, createSetTextPostGroupActiveToGroupsDataReducer
-} from "../../store-management/groupsDataReducer";
+} from "../../reducers/groupsDataReducer";
 
 let mapStateToProps = (state) => {
     return {

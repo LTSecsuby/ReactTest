@@ -2,20 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbf7658-7d0e-491d-82e8-3ca90110fb32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/GroupsComponent/GroupsContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WeatherComponent/WeatherWidgetContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/NavbarContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store-management/navbarReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DialogsComponent/DialogComponent/DialogsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FriendsComponent/FriendsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/dialogsDataReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/friendsDataReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DialogsComponent/DialogComponent/Dialog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DialogsComponent/DialogComponent/Dialog.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GroupsComponent/GroupsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GroupsComponent/GroupsContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/NavbarWrap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/NavbarWrap.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WeatherComponent/WeatherWidgetContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherComponent/WeatherWidgetContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/NavbarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/NavbarContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store-management/groupsDataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store-management/groupsDataReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store-management/widgetWeatherDataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store-management/widgetWeatherDataReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store-management/groupsDataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/groupsDataReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store-management/navbarReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/navbarDataReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store-management/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store-management/widgetWeatherDataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/widgetWeatherDataReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,6 +125,7 @@
       <workItem from="1570852649957" duration="851000" />
       <workItem from="1571817354563" duration="4232000" />
       <workItem from="1571837715902" duration="5895000" />
+      <workItem from="1571900708466" duration="2840000" />
     </task>
     <servers />
   </component>

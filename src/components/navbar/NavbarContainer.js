@@ -7,12 +7,6 @@ let mapStateToProps = (state) => {
     }
 };
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-
-    }
-};
-
 const NavbarContainer = connect(mapStateToProps)(NavbarWrap);
 
 export default NavbarContainer;

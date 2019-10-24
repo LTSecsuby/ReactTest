@@ -5,12 +5,12 @@ import {NavLink, Route} from "react-router-dom";
 
 const TempComp = (props) => {
 
-    let DialogsMessage = props.state.dialogsData.map(
+    let DialogsMessage = props.dialogsData.map(
         (element) => {
 
             if (element.id === props.id) {
                 return (
-                    <div>{element.message}</div>
+                    <div key={element.id}>{element.message}</div>
                 )
             }
 
@@ -25,22 +25,22 @@ const TempComp = (props) => {
 
 const Dialog = (props) => {
 
-    let DialogsElements = props.state.dialogsData.map(
+    let DialogsElements = props.dialogsData.map(
         (element) => {
 
             const path = "/Dialogs/" + element.id;
             return (
-                <p><NavLink className={style.link} to={path}>{element.name}</NavLink></p>
+                <p key={element.id}><NavLink className={style.link} to={path}>{element.name}</NavLink></p>
             )
         }
     );
 
-    let DialogsRoute = props.state.dialogsData.map(
+    let DialogsRoute = props.dialogsData.map(
         (element) => {
 
             return (
-                <Route path={'/Dialogs/' + element.id}
-                       render={() => <TempComp id={element.id} state={props.state}/>}/>
+                <Route key={element.id} path={'/Dialogs/' + element.id}
+                       render={() => <TempComp id={element.id} dialogsData={props.dialogsData}/>}/>
             )
         }
     );

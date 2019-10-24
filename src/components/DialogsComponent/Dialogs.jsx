@@ -6,14 +6,8 @@ import Dialog from "./DialogComponent/Dialog";
 const Dialogs = (props) => {
     return (
         <div className={style.item}>
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <h4>Dialogs</h4>
-                        <Dialog state ={props.state} />
-                    </div>
-                </div>
-            </div>
+            <h4>Dialogs</h4>
+            <Dialog dialogsData ={props.dialogsData} />
         </div>
     );
 };

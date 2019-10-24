@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 const Friends = (props) => {
 
-    let friendsElements = props.state.friendsData.friendsElement.map((element) => {
+    let friendsElements = props.friendsData.friendsElement.map((element) => {
 
             const path = '/Friends/' + element.nameFriend + element.surnameFriend;
             return (

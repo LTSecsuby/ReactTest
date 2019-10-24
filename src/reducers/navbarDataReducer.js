@@ -8,7 +8,7 @@ let initialState = {
     ]
 };
 
-const navbarReducer = (state = initialState, action) => {
+const navbarDataReducer = (state = initialState, action) => {
 
     switch (action.type) {
         default:
@@ -16,4 +16,4 @@ const navbarReducer = (state = initialState, action) => {
     }
 };
 
-export default navbarReducer;
+export default navbarDataReducer;

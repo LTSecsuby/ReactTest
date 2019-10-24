@@ -27,22 +27,19 @@ const Groups = (props) => {
     return (
         <div className={style.item}>
 
-            <div className="container">
-                <div className="row">
-                    <div className="col-6 col-lg-2">
-                        <h4>Groups</h4>
-                        {groupItems}
-                        <textarea onChange={props.onGroupChange} value={props.groupsData.nameGroupText}/>
-                        <p><button onClick={props.addGroups}>Push</button></p>
-                    </div>
-                    <div className="col-6 col-lg-8">
-                        <h4>Group chat</h4>
-                        {groupMsg}
-                        <textarea onChange={props.onPostChange} value={props.groupsData.textGroupPost}/>
-                        <p><button onClick={props.addPosts}>Push</button></p>
-                    </div>
-                </div>
-            </div>
+            <h4>Groups</h4>
+            {groupItems}
+            <textarea onChange={props.onGroupChange} value={props.groupsData.nameGroupText}/>
+            <p>
+                <button onClick={props.addGroups}>Push</button>
+            </p>
+
+            <h4>Group chat</h4>
+            {groupMsg}
+            <textarea onChange={props.onPostChange} value={props.groupsData.textGroupPost}/>
+            <p>
+                <button onClick={props.addPosts}>Push</button>
+            </p>
 
         </div>
     );

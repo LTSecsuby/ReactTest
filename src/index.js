@@ -3,16 +3,20 @@ import * as serviceWorker from './serviceWorker';
 import ReactDOM from "react-dom";
 import App from "./App";
 import {combineReducers, createStore} from "redux";
-import groupsDataReducer from "./store-management/groupsDataReducer";
-import widgetWeatherDataReducer from "./store-management/widgetWeatherDataReducer";
+import groupsDataReducer from "./reducers/groupsDataReducer";
+import widgetWeatherDataReducer from "./reducers/widgetWeatherDataReducer";
 import {Provider} from "react-redux";
-import navbarReducer from "./store-management/navbarReducer";
+import navbarDataReducer from "./reducers/navbarDataReducer";
+import friendsDataReducer from "./reducers/friendsDataReducer";
+import dialogsDataReducer from "./reducers/dialogsDataReducer";
 
 
 let reducers = combineReducers({
     groupsPage: groupsDataReducer,
-    navbarPage: navbarReducer,
-    widgetWeatherPage: widgetWeatherDataReducer
+    navbarPage: navbarDataReducer,
+    widgetWeatherPage: widgetWeatherDataReducer,
+    friendsPage: friendsDataReducer,
+    dialogsPage: dialogsDataReducer
 });
 
 let store = createStore(reducers);
