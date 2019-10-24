@@ -1,6 +1,43 @@
 .App {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+          "Header Header"
+          "Navbar Content"
+          "Footer Footer";
+  grid-gap: 5px;
+}
+
+.Header, .NavbarContainer, .DialogsContainer, .GroupsContainer, .FriendsContainer, .WeatherWidgetContainer, .Profile, .Content, .Footer {
   text-align: center;
 }
+
+.Header {
+  grid-area: Header;
+}
+.NavbarContainer {
+  grid-area: Navbar;
+}
+.DialogsContainer {
+  grid-area: Content;
+}
+.GroupsContainer {
+  grid-area: Content;
+}
+.FriendsContainer {
+  grid-area: Content;
+}
+.WeatherWidgetContainer {
+  grid-area: Content;
+}
+.Profile {
+  grid-area: Content;
+}
+.Footer {
+  grid-area: Footer;
+}
+
+
 
 img {
   max-width: 100%;
@@ -10,4 +47,17 @@ img {
 input {
   max-width: 100%;
   height: auto;
+}
+
+@media (max-width: 640px) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+            "Header"
+            "Content"
+            "Navbar"
+            "Footer";
+    grid-gap: 5px;
+  }
 }
