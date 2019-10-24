@@ -1,43 +1,63 @@
 .App {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
-          "Header Header"
-          "Navbar Content"
-          "Footer Footer";
+          "Header Header Header"
+          "NavbarContainer Content Content"
+          "Footer1 Footer2 Footer3";
   grid-gap: 5px;
 }
 
-.Header, .NavbarContainer, .DialogsContainer, .GroupsContainer, .FriendsContainer, .WeatherWidgetContainer, .Profile, .Content, .Footer {
+.Header, .NavbarContainer, .Groups, .Friends, .Dialogs, .Weather, .Profile, .Content, .Footer1, .Footer2, .Footer3 {
   text-align: center;
+}
+
+.NavbarContainer {
+  grid-area: NavbarContainer;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-row: repeat(5, 1fr);
+  grid-template-areas:
+          "Profile"
+          "Dialogs"
+          "Friends"
+          "Groups"
+          "Weather";
+  grid-gap: 5px;
+
 }
 
 .Header {
   grid-area: Header;
 }
-.NavbarContainer {
-  grid-area: Navbar;
-}
-.DialogsContainer {
+.Content {
   grid-area: Content;
 }
-.GroupsContainer {
-  grid-area: Content;
+.Footer1 {
+  grid-area: Footer1;
 }
-.FriendsContainer {
-  grid-area: Content;
+.Footer2 {
+  grid-area: Footer2;
 }
-.WeatherWidgetContainer {
-  grid-area: Content;
+.Footer3 {
+  grid-area: Footer3;
 }
 .Profile {
-  grid-area: Content;
+  grid-area: Profile;
 }
-.Footer {
-  grid-area: Footer;
+.Groups {
+  grid-area: Groups;
 }
-
-
+.Dialogs {
+  grid-area: Dialogs;
+}
+.Friends {
+  grid-area: Friends;
+}
+.Weather {
+  grid-area: Weather;
+}
 
 img {
   max-width: 100%;
@@ -49,15 +69,27 @@ input {
   height: auto;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .App {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
-            "Header"
-            "Content"
-            "Navbar"
-            "Footer";
+            "Header Header Header Header Header"
+            "NavbarContainer NavbarContainer NavbarContainer NavbarContainer NavbarContainer"
+            "Content Content Content Content Content"
+            "Footer1 Footer1 Footer1 Footer1 Footer1"
+            "Footer2 Footer2 Footer2 Footer2 Footer2"
+            "Footer3 Footer3 Footer3 Footer3 Footer3";
     grid-gap: 5px;
+  }
+  .NavbarContainer {
+    grid-area: NavbarContainer;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+            "Profile Dialogs Friends Groups Weather";
+    grid-gap: 5px;
+
   }
 }

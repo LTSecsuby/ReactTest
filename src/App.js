@@ -19,9 +19,9 @@ function App() {
                 <div className={'Header'}>
                     <Header/>
                 </div>
-                <div className={'NavbarContainer'}>
-                    <NavbarContainer/>
-                </div>
+
+                <NavbarContainer/>
+
                 <div className={'Content'}>
                     <Route path={'/Profile'} render={
                         () => <div className={'Profile'}><Profile/></div>
@@ -46,7 +46,13 @@ function App() {
                     }
                     />
                 </div>
-                <div className={'Footer'}>
+                <div className={'Footer1'}>
+                    <Footer/>
+                </div>
+                <div className={'Footer2'}>
+                    <Footer/>
+                </div>
+                <div className={'Footer3'}>
                     <Footer/>
                 </div>
             </div>

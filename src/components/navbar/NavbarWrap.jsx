@@ -9,13 +9,13 @@ const NavbarWrap = (props) => {
 
                 const path = '/' + element.elementName;
                 return (
-                    <p key={element.id}><NavLink to={path}>{element.elementName}</NavLink></p>
+                    <span className={element.elementName} key={element.id}><NavLink to={path}>{element.elementName}</NavLink></span>
                 )
             }
         );
 
     return (
-        <div className={style.item}>
+        <div className={'NavbarContainer'}>
             {NavbarElements}
         </div>
     );
