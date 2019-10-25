@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import Weather from "./Weather";
-import {createSetTextWeatherWidgetActionToWidgetWeatherDataReducer} from "../../reducers/widgetWeatherDataReducer";
+import {getWeather} from "./getWeather";
 
 
 let mapStateToProps = (state) => {
@@ -13,7 +13,7 @@ let mapDispatchToProps = (dispatch) => {
     return {
         onInputWidgetChange: (e) => {
             let inputText = e.target.value;
-            dispatch(createSetTextWeatherWidgetActionToWidgetWeatherDataReducer(inputText));
+            dispatch(getWeather(inputText))
         }
     }
 };
