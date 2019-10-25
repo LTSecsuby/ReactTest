@@ -22,6 +22,10 @@
     top: 20%;
 }
 
+.TextProfile {
+    white-space: pre-wrap;
+}
+
 .NavbarContainer {
   grid-area: NavbarContainer;
   display: grid;

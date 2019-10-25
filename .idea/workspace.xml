@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbf7658-7d0e-491d-82e8-3ca90110fb32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ProfileComponent/ProfileContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/footer/FooterContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/footerDataReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/profileDataReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DialogsComponent/Dialogs.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FriendsComponent/Friends.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GroupsComponent/Groups.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherComponent/Weather.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +112,8 @@
       <workItem from="1571900708466" duration="2840000" />
       <workItem from="1571907323056" duration="2491000" />
       <workItem from="1571910090929" duration="4895000" />
-      <workItem from="1572000651434" duration="12125000" />
+      <workItem from="1572000651434" duration="12181000" />
+      <workItem from="1572016303399" duration="711000" />
     </task>
     <servers />
   </component>
