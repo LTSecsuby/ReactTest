@@ -1,23 +1,32 @@
 .App {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: minmax(25%, 150px) 1fr 1fr;
+  grid-template-rows: 100px 500px 100px;
   grid-template-areas:
           "Header Header Header"
           "NavbarContainer Content Content"
-          "Footer1 Footer2 Footer3";
+          "FooterContainer FooterContainer FooterContainer";
   grid-gap: 5px;
+
 }
 
-.Header, .NavbarContainer, .Groups, .Friends, .Dialogs, .Weather, .Profile, .Content, .Footer1, .Footer2, .Footer3 {
+.Header, .NavbarContainer, .Groups, .Friends, .Dialogs, .Weather, .Profile, .Content, .Footer1, .Footer2, .Footer3, .FooterContainer {
   text-align: center;
+}
+
+.ContextForm {
+    background: aqua;
+    width: 400px;
+    position: absolute;
+    left: 40%;
+    top: 20%;
 }
 
 .NavbarContainer {
   grid-area: NavbarContainer;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-row: repeat(5, 1fr);
+  grid-template-columns: auto;
+  grid-template-row: repeat(5, auto);
   grid-template-areas:
           "Profile"
           "Dialogs"
@@ -25,10 +34,21 @@
           "Groups"
           "Weather";
   grid-gap: 5px;
+  background: #007aff;
+  grid-auto-rows: 30px;
+}
 
+.FooterContainer {
+    grid-area: FooterContainer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "Footer1 Footer2 Footer3";
+    grid-gap: 5px;
 }
 
 .Header {
+    background: aqua;
   grid-area: Header;
 }
 .Content {
@@ -36,27 +56,35 @@
 }
 .Footer1 {
   grid-area: Footer1;
+    background: #005b1b;
 }
 .Footer2 {
   grid-area: Footer2;
+    background: #00971e;
 }
 .Footer3 {
   grid-area: Footer3;
+    background: #00f924;
 }
 .Profile {
   grid-area: Profile;
+    background: #fff71f;
 }
 .Groups {
   grid-area: Groups;
+    background: #fff71f;
 }
 .Dialogs {
   grid-area: Dialogs;
+    background: #fff71f;
 }
 .Friends {
   grid-area: Friends;
+    background: #fff71f;
 }
 .Weather {
   grid-area: Weather;
+    background: #fff71f;
 }
 
 img {
@@ -69,27 +97,48 @@ input {
   height: auto;
 }
 
+span {
+    height: 40px;
+}
+
 @media (max-width: 768px) {
   .App {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: 100px 100px minmax(400px, auto) auto;
     grid-template-areas:
             "Header Header Header Header Header"
             "NavbarContainer NavbarContainer NavbarContainer NavbarContainer NavbarContainer"
             "Content Content Content Content Content"
-            "Footer1 Footer1 Footer1 Footer1 Footer1"
-            "Footer2 Footer2 Footer2 Footer2 Footer2"
-            "Footer3 Footer3 Footer3 Footer3 Footer3";
+            "FooterContainer FooterContainer FooterContainer FooterContainer FooterContainer";
     grid-gap: 5px;
   }
   .NavbarContainer {
     grid-area: NavbarContainer;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, auto);
     grid-template-areas:
             "Profile Dialogs Friends Groups Weather";
     grid-gap: 5px;
-
+    background: #007aff;
+    align-content: center;
   }
+    .FooterContainer {
+        grid-area: FooterContainer;
+        display: grid;
+        grid-template-row: 1fr;
+        grid-auto-rows: 100px;
+        grid-template-areas:
+                "Footer1 Footer1 Footer1"
+                "Footer2 Footer2 Footer2"
+                "Footer3 Footer3 Footer3";
+        grid-gap: 5px;
+    }
+    .ContextForm {
+        background: aqua;
+        width: 400px;
+        position: absolute;
+        left: 20%;
+        top: 20%;
+    }
 }

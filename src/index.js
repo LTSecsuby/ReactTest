@@ -9,6 +9,8 @@ import {Provider} from "react-redux";
 import navbarDataReducer from "./reducers/navbarDataReducer";
 import friendsDataReducer from "./reducers/friendsDataReducer";
 import dialogsDataReducer from "./reducers/dialogsDataReducer";
+import footerDataReducer from "./reducers/footerDataReducer";
+import profileDataReducer from "./reducers/profileDataReducer";
 
 
 let reducers = combineReducers({
@@ -16,7 +18,9 @@ let reducers = combineReducers({
     navbarPage: navbarDataReducer,
     widgetWeatherPage: widgetWeatherDataReducer,
     friendsPage: friendsDataReducer,
-    dialogsPage: dialogsDataReducer
+    dialogsPage: dialogsDataReducer,
+    footerPage: footerDataReducer,
+    profilePage: profileDataReducer
 });
 
 let store = createStore(reducers);

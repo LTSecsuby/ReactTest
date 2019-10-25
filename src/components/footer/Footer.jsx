@@ -6,7 +6,7 @@ const Footer = () => {
     return (
 
         <div className={style.item}>
-            <h1>FOOTER HERE</h1>
+            <div>FOOTER HERE</div>
         </div>
 
 
