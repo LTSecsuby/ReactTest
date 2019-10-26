@@ -2,7 +2,7 @@ import React from 'react';
 import * as serviceWorker from './serviceWorker';
 import ReactDOM from "react-dom";
 import App from "./App";
-import {combineReducers, createStore} from "redux";
+import {applyMiddleware, combineReducers, createStore} from "redux";
 import groupsDataReducer from "./reducers/groupsDataReducer";
 import widgetWeatherDataReducer from "./reducers/widgetWeatherDataReducer";
 import {Provider} from "react-redux";
@@ -11,7 +11,7 @@ import friendsDataReducer from "./reducers/friendsDataReducer";
 import dialogsDataReducer from "./reducers/dialogsDataReducer";
 import footerDataReducer from "./reducers/footerDataReducer";
 import profileDataReducer from "./reducers/profileDataReducer";
-
+import thunk from 'redux-thunk';
 
 let reducers = combineReducers({
     groupsPage: groupsDataReducer,
@@ -23,7 +23,7 @@ let reducers = combineReducers({
     profilePage: profileDataReducer
 });
 
-let store = createStore(reducers);
+let store = createStore(reducers, applyMiddleware(thunk));
 
 ReactDOM.render(
 <Provider store={store}>

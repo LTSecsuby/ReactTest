@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbf7658-7d0e-491d-82e8-3ca90110fb32" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.module.css" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/components/WeatherComponent/getWeather.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileComponent/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WeatherComponent/WeatherWidgetContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherComponent/WeatherWidgetContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/widgetWeatherDataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/widgetWeatherDataReducer.js" afterDir="false" />
+>>>>>>> 3b9fb1cfd5a920bef933b1aac28bd1fc90265b4c
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,9 +124,16 @@
       <workItem from="1571900708466" duration="2840000" />
       <workItem from="1571907323056" duration="2491000" />
       <workItem from="1571910090929" duration="4895000" />
+<<<<<<< HEAD
       <workItem from="1572000651434" duration="12125000" />
       <workItem from="1572015281666" duration="165000" />
       <workItem from="1572062959389" duration="1661000" />
+=======
+      <workItem from="1572000651434" duration="12181000" />
+      <workItem from="1572016303399" duration="711000" />
+      <workItem from="1572023570907" duration="3885000" />
+      <workItem from="1572027856452" duration="2182000" />
+>>>>>>> 3b9fb1cfd5a920bef933b1aac28bd1fc90265b4c
     </task>
     <servers />
   </component>
