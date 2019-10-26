@@ -10,9 +10,8 @@ const Profile = (props) => {
     }
     if (props.profileData.boolContextForm === 'unhide') {
         buttonEdit = '';
-        contextForm = <div className={'ContextForm'}><textarea rows="10" cols="45" value={props.profileData.textProfile} onChange={props.setTextContextForm}></textarea><p><button onClick={props.saveContextForm}>ok</button></p></div>
+        contextForm = <div className={'ContextForm'}><textarea rows="4" cols="35" value={props.profileData.textProfile} onChange={props.setTextContextForm}></textarea><p><button onClick={props.saveContextForm}>ok</button></p></div>
     }
-
 
     return (
         <div className={style.item}>

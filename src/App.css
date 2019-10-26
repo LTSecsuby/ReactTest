@@ -1,13 +1,12 @@
 .App {
   display: grid;
   grid-template-columns: minmax(25%, 150px) 1fr 1fr;
-  grid-template-rows: 100px 500px 100px;
+  grid-template-rows: 100px 350px 100px;
   grid-template-areas:
           "Header Header Header"
           "NavbarContainer Content Content"
           "FooterContainer FooterContainer FooterContainer";
   grid-gap: 5px;
-
 }
 
 .Header, .NavbarContainer, .Groups, .Friends, .Dialogs, .Weather, .Profile, .Content, .Footer1, .Footer2, .Footer3, .FooterContainer {
@@ -16,10 +15,15 @@
 
 .ContextForm {
     background: aqua;
-    width: 400px;
+    width: 300px;
+    height: 150px;
     position: absolute;
-    left: 40%;
-    top: 20%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0.8;
 }
 
 .NavbarContainer {
@@ -105,7 +109,7 @@ span {
   .App {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    grid-template-rows: 100px 100px minmax(400px, auto) auto;
+    grid-template-rows: 100px 100px minmax(350px, auto) auto;
     grid-template-areas:
             "Header Header Header Header Header"
             "NavbarContainer NavbarContainer NavbarContainer NavbarContainer NavbarContainer"
@@ -133,12 +137,5 @@ span {
                 "Footer2 Footer2 Footer2"
                 "Footer3 Footer3 Footer3";
         grid-gap: 5px;
-    }
-    .ContextForm {
-        background: aqua;
-        width: 400px;
-        position: absolute;
-        left: 20%;
-        top: 20%;
     }
 }
