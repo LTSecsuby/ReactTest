@@ -8,7 +8,7 @@ const Friends = (props) => {
 
             const path = '/Friends/' + element.nameFriend + element.surnameFriend;
             return (
-                <div>
+                <div key={element.id}>
                     <img src={element.avatar} alt="avatar"/>
                     <span key={element.id}><NavLink to={path}>{element.nameFriend} {element.surnameFriend}</NavLink></span>
                 </div>

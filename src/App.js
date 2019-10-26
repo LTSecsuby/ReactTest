@@ -25,7 +25,7 @@ function App() {
 
                 <div className={'Content'}>
                     <Route path={'/Profile'} render={
-                        () => <div><ProfileContainer /></div>
+                        () => <div className={'ProfileDiv'}><ProfileContainer /></div>
                     }
                     />
 
